@@ -57,19 +57,30 @@ const Skills = () => {
         <h2 className="section-title">
           My <span>Skills</span>
         </h2>
-        <div className="skills-container">
+        <div
+          className=" grid 
+ gap-8 max-w-6xl mx-auto max-w-[1200px]"
+          style={{
+            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+          }}
+        >
           {skillsData.map((item) => (
-            <div className="skill-category">
-              <h3 className="category-title">{item.title}</h3>
-              <div className="skills-grid">
+            <div className=" bg-[#fff] rounded-xl p-8 shadow-[0_5px_20px_rgba(0,0,0,0.1)] transition-transform  hover:scale-110">
+              <h3 className="text-2xl mb-8 text-gray-600">{item.title}</h3>
+              <div
+                className="grid gap-5"
+                style={{
+                  gridTemplateColumns: "repeat(auto-fit, minmax(80px, 1fr))",
+                }}
+              >
                 {item.skills.map((skill) => (
-                  <div className="skill-item">
+                  <div className=" text-center  transition-transform hover:scale-110">
                     {typeof skill.icon === "function" ? (
-                      <skill.icon className="skill-icon" />
+                      <skill.icon className=" w-[60px] h-[60px]  mx-auto mb-2 rounded-[10px] flex items-center justify-center text-[2rem] transition-transform duration-300" />
                     ) : (
                       skill.icon
                     )}{" "}
-                    <p className="skill-name">{skill.name}</p>
+                    <p className=" text-sm text-gray-600">{skill.name}</p>
                   </div>
                 ))}
               </div>
