@@ -1,5 +1,5 @@
 import React from "react";
-import "./Skills.css";
+
 import {
   HtmlIcon,
   CSS3Icon,
@@ -58,8 +58,7 @@ const Skills = () => {
           My <span>Skills</span>
         </h2>
         <div
-          className=" grid 
- gap-8 max-w-6xl mx-auto max-w-[1200px]"
+          className=" grid gap-8 max-w-6xl mx-auto max-w-[1200px]"
           style={{
             gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
           }}
@@ -76,7 +75,7 @@ const Skills = () => {
                 {item.skills.map((skill) => (
                   <div className=" text-center  transition-transform hover:scale-110">
                     {typeof skill.icon === "function" ? (
-                      <skill.icon className=" w-[60px] h-[60px]  mx-auto mb-2 rounded-[10px] flex items-center justify-center text-[2rem] transition-transform duration-300" />
+                      <skill.icon className=" w-[60px] h-[60px] bg-[#f0f0f0]  mx-auto mb-2 rounded-full p-2 flex items-center justify-center text-4xl transition-transform duration-300" />
                     ) : (
                       skill.icon
                     )}{" "}

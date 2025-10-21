@@ -23,6 +23,7 @@ import MongoDBIcon from "./MongoDB.svg?react";
 // import ViteIcon from "./Vite.svg?react";
 // import VsCodeIcon from "./VsCode.svg?react";
 import PostmanIcon from "./Postman.svg?react";
+import RightArrowKey from "./arrow-right.svg?react";
 // import NetlifyIcon from "./Netlify.svg?react";
 // // import VercelIcon from "./Vercel.svg?react";
 // import AwsIcon from "./Aws.svg?react";
@@ -46,4 +47,5 @@ export {
   GitIcon,
   PostmanIcon,
   NpmIcon,
+  RightArrowKey
 };
