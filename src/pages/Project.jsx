@@ -16,19 +16,7 @@ const Project = () => {
       <h2 className="text-center text-red-500 mt-20">Project not found!</h2>
     );
   }
-  const {
-    title,
-    tagline,
-    liveDemo,
-    github,
-    overview,
-    techStack,
-    features,
-    learningJourney,
-    challenges,
-    screenshots,
-    outcome,
-  } = projectData[0];
+ 
 
   return (
     <>

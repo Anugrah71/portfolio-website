@@ -24,7 +24,7 @@ import MongoDBIcon from "./MongoDB.svg?react";
 // import VsCodeIcon from "./VsCode.svg?react";
 import PostmanIcon from "./Postman.svg?react";
 import RightArrowKey from "./arrow-right.svg?react";
-// import NetlifyIcon from "./Netlify.svg?react";
+ import LinkedInIcon from "./LinkedIn.svg?react";
 // // import VercelIcon from "./Vercel.svg?react";
 // import AwsIcon from "./Aws.svg?react";
 // import AzureIcon from "./Azure.svg?react";
@@ -35,6 +35,7 @@ export {
   HtmlIcon,
   CSS3Icon,
   JSIcon,
+  LinkedInIcon,
   TailwindIcon,
   BootstrapIcon,
   TypeScriptIcon,

@@ -26,7 +26,7 @@ const skillsData = [
       { icon: CSS3Icon, name: "CSS" },
       { icon: JSIcon, name: "JavaScript" },
       { icon: ReactIcon, name: "React" },
-      { icon: TailwindIcon, name: "TailwindIcon" },
+      { icon: TailwindIcon, name: "Tailwind" },
       { icon: BootstrapIcon, name: "Bootstrap" },
       { icon: TypeScriptIcon, name: "TypeScript" },
       { icon: NextJsIcon, name: "Next.js" },
@@ -50,44 +50,46 @@ const skillsData = [
     ],
   },
 ];
+
 const Skills = () => {
   return (
-    <>
-      <section className="skills" style={{ background: "#f8f8f8" }}>
-        <h2 className="section-title">
-          My <span>Skills</span>
-        </h2>
-        <div
-          className=" grid gap-8 max-w-6xl mx-auto max-w-[1200px]"
-          style={{
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-          }}
-        >
-          {skillsData.map((item) => (
-            <div className=" bg-[#fff] rounded-xl p-8 shadow-[0_5px_20px_rgba(0,0,0,0.1)] transition-transform  hover:scale-110">
-              <h3 className="text-2xl mb-8 text-gray-600">{item.title}</h3>
-              <div
-                className="grid gap-5"
-                style={{
-                  gridTemplateColumns: "repeat(auto-fit, minmax(80px, 1fr))",
-                }}
-              >
-                {item.skills.map((skill) => (
-                  <div className=" text-center  transition-transform hover:scale-110">
-                    {typeof skill.icon === "function" ? (
-                      <skill.icon className=" w-[60px] h-[60px] bg-[#f0f0f0]  mx-auto mb-2 rounded-full p-2 flex items-center justify-center text-4xl transition-transform duration-300" />
-                    ) : (
-                      skill.icon
-                    )}{" "}
-                    <p className=" text-sm text-gray-600">{skill.name}</p>
-                  </div>
-                ))}
-              </div>
+    <section className="skills bg-[#f8f8f8] py-20 px-5 sm:px-10 md:px-20">
+      <h2 className="section-title text-3xl sm:text-4xl md:text-5xl text-center mb-16 font-bold">
+        My <span className="text-[#333]">Skills</span>
+      </h2>
+
+      <div className="grid gap-8 sm:gap-10 md:gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-[1200px] mx-auto">
+        {skillsData.map((item, idx) => (
+          <div
+            key={idx}
+            className="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:scale-105 transition-transform duration-300 flex flex-col"
+          >
+            <h3 className="text-2xl sm:text-3xl mb-6 sm:mb-8 text-gray-600 text-center">
+              {item.title}
+            </h3>
+            <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 lg:gap-8 justify-items-center">
+              {item.skills.map((skill, i) => (
+                <div
+                  key={i}
+                  className="text-center transition-transform hover:scale-110"
+                >
+                  {typeof skill.icon === "function" ? (
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-2 rounded-full bg-[#f0f0f0] flex items-center justify-center overflow-hidden transition-transform duration-300 hover:scale-110">
+                      <skill.icon className="w-8 h-8 sm:w-10 sm:h-10 object-contain" />
+                    </div>
+                  ) : (
+                    skill.icon
+                  )}
+                  <p className="text-sm sm:text-base text-gray-600">
+                    {skill.name}
+                  </p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </section>
-    </>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };
 
