@@ -1,29 +1,36 @@
-import React from "react";
+
+import {
+  GithubIcon,
+  LinkedInIcon,
+  LocationIcon,
+  PhoneIcon,
+  EmailIcon,
+} from "../assets/icons";
 
 const contactData = [
   {
-    icon: "📧",
+    icon: <EmailIcon className="w-6 h-6  " />,
     title: "Email",
     value: "anugrahk2025@gmail.com",
   },
   {
-    icon: "📱",
+    icon: <PhoneIcon className="w-6 h-6 text-blue-500" />,
     title: "Phone",
     value: "+91 8136942178",
   },
   {
-    icon: "📍",
+    icon: <LocationIcon className="w-8 h-8" />,
     title: "Location",
     value: "Kerala, India",
   },
   {
-    icon: "💼",
+    icon: <LinkedInIcon className="w-6 h-6" />,
     title: "LinkedIn",
     value: "linkedin.com/in/anugrah-k78",
     href: "https://www.linkedin.com/in/anugrah-k78/",
   },
   {
-    icon: "⚙️",
+    icon: <GithubIcon className="w-6 h-6" />,
     title: "GitHub",
     value: "github.com/Anugrah71",
     href: "https://github.com/Anugrah71",
@@ -33,44 +40,42 @@ const contactData = [
 const Contact = () => {
   return (
     <>
-      <section className="contact bg-[##f8f8f8]" id="contact">
+      <section className="contact " id="contact">
         <h2 className="section-title">
           Get in <span>Touch</span>
         </h2>
         <div className="max-w-3xl mx-auto bg-[#fff] p-12 rounded-[10px] shadow-[0_5px_20px_rgba(0,0,0,0.1)]">
-          <p className=" text-center mb-12 text-[#666]">
+          <p className="text-center mb-12 text-[#666]">
             Let's connect! Here's how you can reach me.
           </p>
 
-          <div className=" flex flex-col gap-[1.5rem]">
+          <div className="flex flex-col gap-[1.5rem]">
             {contactData.map((item) => (
-              <div className="flex items-center gap-4 p-4 border-b  border-[#eee]">
-                <div className="text-2xl w-10 ">{item.icon}</div>
+              <div
+                key={item.title}
+                className="flex items-center gap-4 p-4 border-b border-[#eee]"
+              >
+                <div className="text-2xl w-10">{item.icon}</div>
                 <div className="text-sm text-[#666] font-medium">
                   <h3>{item.title}</h3>
                   {item.href ? (
-                    <a href={item.href} target="_blank">
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <p className="text-[#333]">{item.value}</p>
                     </a>
                   ) : (
-                    <p className="color-[#333]">{item.value}</p>
+                    <p className="text-[#333]">{item.value}</p>
                   )}
                 </div>
               </div>
             ))}
           </div>
-
-          <div className="mt-16 pt-12  text-center">
-            <h3 className="text-[2rem] mb-4">Let's Build Something Great</h3>
-            <p className="text-[#666] mb-8">
-              I'm a BCA graduate and a passionate self-learner, seeking
-              opportunities to apply my skills in real-world projects. I'm eager
-              to contribute, collaborate, and build innovative solutions that
-              make a meaningful impact.
-            </p>
-          </div>
         </div>
       </section>
+      {/* <Footer /> */}
     </>
   );
 };

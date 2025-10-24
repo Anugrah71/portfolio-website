@@ -7,16 +7,15 @@ const Project = () => {
   const { id } = useParams();
   const [project, setProject] = useState(null);
   useEffect(() => {
-    const found  = projectData.find((p) => p.id === Number(id));
+    const found = projectData.find((p) => p.id === Number(id));
     setProject(found);
-  },[id]);
+  }, [id]);
 
   if (!project) {
     return (
       <h2 className="text-center text-red-500 mt-20">Project not found!</h2>
     );
   }
- 
 
   return (
     <>
@@ -46,7 +45,7 @@ const Project = () => {
         <div className="container">
           <h2 className="section-title">Tech Stack</h2>
           {Object.entries(project.techStack).map(([category, tools]) => (
-            <div key={project.category} className="tech-category">
+            <div key={category} className="tech-category">
               <div className="tech-category-title">{category}</div>
               <div className="tech-badges">
                 {tools.map((tool) => (

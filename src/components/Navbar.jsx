@@ -1,10 +1,32 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = () => {
+    if (window.scrollY > lastScrollY) {
+      setIsVisible(false);
+    } else {
+      setIsVisible(true);
+    }
+    setLastScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar);
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, [lastScrollY]);
   return (
-    <nav className="fixed top-0 w-full bg-white px-[5%] py-6 flex justify-between items-center shadow-md z-[1000]">
+    <nav
+      className={`fixed top-0 w-full bg-white px-[5%] py-6 flex justify-between items-center shadow-md z-[1000] transition-transform duration-300 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <h1 className="text-xl font-bold">ANUGRAH K</h1>
       <ul className="hidden md:flex gap-8 list-none sm:hidden">
         <li>

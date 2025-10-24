@@ -4,8 +4,7 @@ import Hero from "../components/Hero";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import Contact from "../components/Contact";
-// import Project from "./pages/Project";
-
+import Footer from "../components/Footer"
 function Home() {
   return (
     <>
@@ -14,6 +13,7 @@ function Home() {
       <Projects />
       <Skills />
       <Contact />
+      <Footer />
     </>
   );
 }
