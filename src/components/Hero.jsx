@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import Typewriter from "typewriter-effect";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import ResumePDF from "../assets/resume.pdf"; // make sure webpack/file-loader handles PDF
+import ResumePDF from "/resume.pdf";
+import { Link } from "react-router-dom";
 
 
 const Hero = () => {
@@ -41,7 +42,8 @@ const Hero = () => {
           <span className="absolute inset-0 bg-[#333] origin-bottom scale-y-0 transition-transform duration-300 group-hover:scale-y-100"></span>
         </a>
 
-        <button
+        <Link 
+        to='/ContactMe'
           data-aos="fade-up"
           className="relative overflow-hidden group w-full sm:w-auto lg:w-60 px-8 py-3 sm:py-4 border-2 border-[#333] bg-transparent text-[1rem] sm:text-[1.1rem] cursor-pointer transition-all duration-300 inline-flex items-center justify-center gap-2"
         >
@@ -49,16 +51,16 @@ const Hero = () => {
             Contact Me
           </span>
           <span className="absolute inset-0 bg-[#333] origin-bottom scale-y-0 transition-transform duration-300 group-hover:scale-y-100"></span>
-        </button>
+        </Link>
       </div>
 
       <p
         data-aos="fade-up"
         className="max-w-[700px] text-[0.95rem] sm:text-[1rem] md:text-[1.1rem] leading-relaxed text-[#555]"
       >
-        I’m a Full Stack Developer refining my MERN skills through consistent
+        I'm a Full Stack Developer refining my MERN skills through consistent
         practice and projects. I enjoy building complete applications from
-        backend logic to frontend design and I’m focused on writing cleaner,
+        backend logic to frontend design and I'm focused on writing cleaner,
         more efficient code every day as I grow into a stronger developer.
       </p>
     </section>

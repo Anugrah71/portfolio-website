@@ -14,10 +14,10 @@ const Projects = () => {
         </span>
       </h2>
 
-      <div className="projects-grid grid gap-8 sm:gap-10 md:gap-12 grid-cols-1 sm:grid-cols-1 lg:grid-cols-2">
+      <div className="projects-grid grid gap-8 sm:gap-10 md:gap-12 grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 ">
         {projectData.map((item) => (
           <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 flex flex-col h-full">
-            <div className="project-image w-full h-56 sm:h-64 md:h-72 flex items-center justify-center bg-gray-100">
+            <div className="project-image w-full h-56 sm:h-64 md:h-72 flex items-center justify-center bg-gray-100 ">
               <img
                 src={item.imageUrl}
                 alt={item.title}
@@ -39,14 +39,13 @@ const Projects = () => {
                 </Link>
               </div>
 
-              <p className="project-description text-gray-600 text-sm sm:text-base mb-4 flex-1">
+              <p className="project-description text-gray-600 text-sm sm:text-base mb-2 flex-1">
                 {item.description}
               </p>
-
-              <p className="stack-title font-semibold mb-2 text-gray-700">
+              <p className="stack-title font-semibold mb-4 text-gray-700">
                 Stack:
               </p>
-              <div className="tech-stack flex flex-wrap gap-2 mb-4 overflow-x-auto whitespace-nowrap py-1">
+              <div className="flex flex-wrap gap-2 mb-4 overflow-x-auto whitespace-nowrap py-1">
                 {item.stack.map((stack, index) => (
                   <span
                     key={index}
@@ -57,7 +56,6 @@ const Projects = () => {
                 ))}
               </div>
 
-              {/* Buttons */}
               <div className="project-buttons flex flex-col sm:flex-row gap-3 mt-auto">
                 <a
                   href={item.liveDemoUrl}
