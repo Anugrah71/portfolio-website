@@ -53,7 +53,6 @@ section {
   font-weight: 600;
   -webkit-text-stroke: 1px #333;
   color: transparent;
-  
 }
 
 a {
@@ -65,4 +64,13 @@ a {
 
 a:hover {
   color: #666;
+}
+
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease forwards;
 }

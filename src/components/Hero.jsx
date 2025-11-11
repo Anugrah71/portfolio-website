@@ -5,14 +5,13 @@ import "aos/dist/aos.css";
 import ResumePDF from "/resume.pdf";
 import { Link } from "react-router-dom";
 
-
 const Hero = () => {
   useEffect(() => {
     AOS.init({ duration: 1500 });
   }, []);
 
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center px-6 sm:px-8 md:px-12 bg-[#f8f8f8] mt-10 text-center">
+    <section id="home" className="min-h-screen flex flex-col justify-center items-center px-6 sm:px-8 md:px-12 bg-[#f8f8f8] mt-10 text-center">
       <h1
         data-aos="fade-right"
         className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[5rem] font-black mb-4 mt-2 tracking-tight leading-tight"
@@ -32,9 +31,11 @@ const Hero = () => {
       </h2>
 
       <div className="flex flex-col sm:flex-row gap-4  sm:gap-6 lg:gap-2 mb-10">
-        <a href={ResumePDF} download
+        <a
+          href={ResumePDF}
+          download
           data-aos="fade-up"
-          className="relative overflow-hidden group w-full sm:w-auto lg:w-60 px-8 py-3 sm:py-4 border-2 border-[#333] bg-transparent text-[1rem] sm:text-[1.1rem] cursor-pointer transition-all duration-300 inline-flex items-center justify-center gap-2"
+          className="relative overflow-hidden group w-full sm:w-auto md:w-58 lg:w-60 px-8 py-3 sm:py-4 border-2 border-[#333] bg-transparent text-[1rem] sm:text-[1.1rem] cursor-pointer transition-all duration-300 inline-flex items-center justify-center gap-2"
         >
           <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
             Download Resume ⬇
@@ -42,10 +43,10 @@ const Hero = () => {
           <span className="absolute inset-0 bg-[#333] origin-bottom scale-y-0 transition-transform duration-300 group-hover:scale-y-100"></span>
         </a>
 
-        <Link 
-        to='/ContactMe'
+        <Link
+          to="/ContactMe"
           data-aos="fade-up"
-          className="relative overflow-hidden group w-full sm:w-auto lg:w-60 px-8 py-3 sm:py-4 border-2 border-[#333] bg-transparent text-[1rem] sm:text-[1.1rem] cursor-pointer transition-all duration-300 inline-flex items-center justify-center gap-2"
+          className="relative overflow-hidden group w-full sm:w-auto md:w-58 lg:w-60 px-8 py-3 sm:py-4 border-2 border-[#333] bg-transparent text-[1rem] sm:text-[1.1rem] cursor-pointer transition-all duration-300 inline-flex items-center justify-center gap-2"
         >
           <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
             Contact Me

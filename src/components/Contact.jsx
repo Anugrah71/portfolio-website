@@ -40,7 +40,7 @@ const contactData = [
 const Contact = () => {
   return (
     <>
-      <section className="" id="contact">
+      <section className="bg-[#f8f8f8]" id="contact">
         <h2 className="section-title">
           Get in <span>Touch</span>
         </h2>

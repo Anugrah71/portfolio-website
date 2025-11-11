@@ -1,15 +1,24 @@
 // src/data/projectsData.js
+ import Todo1 from "../assets/Todo1.png"
+ import Todo2 from "../assets/Todo2.png"
+ import Todo3 from "../assets/Todo3.png"
+ import Todo4 from "../assets/Todo4.png"
+ import Todo5 from "../assets/Todo5.png"
+ import Todo6 from "../assets/Todo6.png"
+
+
+
 export const projectData = [
   {
     id: 1,
     title: "Todo App",
     description:
       "A full-stack application for managing tasks with user authentication and session management using Node.js, Express, PostgreSQL, and EJS.",
-    imageUrl: "../src/assets/Todo1.png",
+    imageUrl: Todo1,
     tagline:
       "A secure full-stack todo manager with Node.js, Express, PostgreSQL, and EJS.",
     liveDemo: "https://todo-app-ba6i.onrender.com",
-    github: "#",
+    github: "https://github.com/Anugrah71/Todo-app",
     overview: `A full-stack application allowing users to register, log in, and manage their tasks. Features include creating, updating (marking as complete/incomplete), and deleting todos, categorized by due date (Overdue, Due Today, Due Later). Built with Node.js and Express on the backend, using PostgreSQL with Sequelize ORM for the database, and EJS with Tailwind CSS for the frontend. Includes security features like password hashing (bcrypt), CSRF protection (csurf), and session management (express-session, Passport.js). Tested using Jest and Supertest.`,
     stack: [
       "Node.js",
@@ -40,6 +49,7 @@ export const projectData = [
         "Sequelize-CLI",
       ],
     },
+    images:[Todo1,Todo2,Todo3,Todo4,Todo5,Todo6],
     features: [
       {
         icon: "🔐",
@@ -206,8 +216,8 @@ export const projectData = [
     imageUrl: "../src/assets/Food2.png",
     tagline:
       "A food ordering platform built with React, Node.js, Express, and MongoDB.",
-    liveDemo: "#",
-    github: "#",
+    liveDemo: "https://food-website-1-ck7j.onrender.com",
+    github: "https://github.com/Anugrah71/Food_website",
     overview: `A MERN stack application where users can sign up, log in, browse food items categorized and displayed with details (name, image, description, options, price), search for items, add selected items (with quantity and size options) to a shopping cart, view the cart, and place orders. User authentication is handled using JWT and bcrypt for password hashing. The backend fetches food items and categories from a MongoDB database and provides APIs for user management, data retrieval, and order placement. The frontend uses React with React Router for navigation and Context API for managing the shopping cart state. Styling is done using Bootstrap and custom CSS.`, // Derived from README.md and code structure
     stack: ["MongoDB", "Express.js", "React", "Node.js", "Bootstrap"],
     techStack: {
@@ -288,8 +298,8 @@ export const projectData = [
       "A React application that fetches and displays current weather data, forecasts, and air quality information based on user search.",
     imageUrl: "../src/assets/Weather3.png",
     tagline: "A weather dashboard built with React and the WeatherAPI.",
-    liveDemo: "#",
-    github: "#",
+    liveDemo: "https://react-weather-app-five-iota.vercel.app/",
+    github: "https://github.com/Anugrah71/React-Weather-App",
     overview: `This application allows users to search for a city and view detailed weather information. It fetches data from the WeatherAPI, including current conditions (temperature, humidity, wind speed, pressure, UV index, feels like temp), air quality index (AQI), and a multi-day forecast. It displays this information in a user-friendly interface, including icons for weather conditions and a line chart showing temperature trends over the next 24 hours. The app is built using React with Vite, utilizes Axios for API calls, and Chart.js for the temperature forecast chart.`, // Derived from README.md, App.jsx, Home.jsx, Weatherapi.js
     stack: ["React", "Axios", "Chart.js"],
     techStack: {

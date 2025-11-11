@@ -27,9 +27,9 @@ const skillsData = [
       { icon: JSIcon, name: "JavaScript" },
       { icon: ReactIcon, name: "React" },
       { icon: TailwindIcon, name: "Tailwind" },
-      { icon: BootstrapIcon, name: "Bootstrap" },
-      { icon: TypeScriptIcon, name: "TypeScript" },
-      { icon: NextJsIcon, name: "Next.js" },
+      // { icon: BootstrapIcon, name: "Bootstrap" },
+      // { icon: TypeScriptIcon, name: "TypeScript" },
+      // { icon: NextJsIcon, name: "Next.js" },
     ],
   },
   {
@@ -53,7 +53,10 @@ const skillsData = [
 
 const Skills = () => {
   return (
-    <section className="skills bg-[#f8f8f8] py-20 px-5 sm:px-10 md:px-20">
+    <section
+      id="skills"
+      className="py-20 px-5 sm:px-10 md:px-20 bg-[#f8f8f8]"
+    >
       <h2 className="section-title text-3xl sm:text-4xl md:text-5xl text-center mb-16 font-bold">
         My <span className="text-[#333]">Skills</span>
       </h2>
