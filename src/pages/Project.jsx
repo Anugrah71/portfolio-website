@@ -135,10 +135,8 @@ const Project = () => {
                 key={title}
                 className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:-translate-y-1 hover:shadow-lg transition text-left sm:text-center"
               >
-                <div className="w-10 h-10 bg-black text-white flex items-center justify-center rounded-md mb-3 mx-auto sm:mx-0">
-                  {icon}
-                </div>
-                <h3 className="text-lg font-semibold mb-2">{title}</h3>
+                
+                <h3 className="text-lg font-bold mb-2">{title}</h3>
                 <p className="text-gray-600 text-sm sm:text-base">{desc}</p>
               </div>
             ))}
@@ -172,7 +170,7 @@ const Project = () => {
         </div>
       </section>
 
-      {/* ===== OUTCOME ===== */}
+      {/* OUTCOME */}
       <section className="py-14 sm:py-20 px-4 sm:px-10 md:px-20 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-gray-900">

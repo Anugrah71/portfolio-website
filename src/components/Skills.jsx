@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import {
   HtmlIcon,
@@ -27,9 +28,6 @@ const skillsData = [
       { icon: JSIcon, name: "JavaScript" },
       { icon: ReactIcon, name: "React" },
       { icon: TailwindIcon, name: "Tailwind" },
-      // { icon: BootstrapIcon, name: "Bootstrap" },
-      // { icon: TypeScriptIcon, name: "TypeScript" },
-      // { icon: NextJsIcon, name: "Next.js" },
     ],
   },
   {
@@ -51,48 +49,92 @@ const skillsData = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.12, delayChildren: 0.05 },
+  },
+};
+
+const cardVariant = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.35, ease: "easeOut" },
+  },
+};
+
+const iconVariant = {
+  hidden: { opacity: 0, scale: 0.8 },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: { type: "spring", stiffness: 200, damping: 12 },
+  },
+};
+
 const Skills = () => {
   return (
-    <section
+    <motion.section
       id="skills"
       className="py-20 px-5 sm:px-10 md:px-20 bg-[#f8f8f8]"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
     >
-      <h2 className="section-title text-3xl sm:text-4xl md:text-5xl text-center mb-16 font-bold">
+      <motion.h2
+        className="section-title text-3xl sm:text-4xl md:text-5xl text-center mb-16 font-bold"
+        variants={cardVariant}
+      >
         My <span className="text-[#333]">Skills</span>
-      </h2>
+      </motion.h2>
 
-      <div className="grid gap-8 sm:gap-10 md:gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-[1200px] mx-auto">
+      <motion.div
+        className="grid gap-8 sm:gap-10 md:gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-[1200px] mx-auto"
+        variants={containerVariants}
+      >
         {skillsData.map((item, idx) => (
-          <div
+          <motion.div
             key={idx}
-            className="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:scale-105 transition-transform duration-300 flex flex-col"
+            variants={cardVariant}
+            whileHover={{ scale: 1.04 }}
+            transition={{ type: "spring", stiffness: 200, damping: 12 }}
+            className="bg-white rounded-xl p-6 sm:p-8 shadow-lg flex flex-col"
           >
-            <h3 className="text-2xl sm:text-3xl mb-6 sm:mb-8 text-gray-600 text-center">
+            <motion.h3
+              variants={cardVariant}
+              className="text-2xl sm:text-3xl mb-6 sm:mb-8 text-gray-600 text-center"
+            >
               {item.title}
-            </h3>
-            <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 lg:gap-8 justify-items-center">
+            </motion.h3>
+
+            <motion.div
+              className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 lg:gap-8 justify-items-center"
+              variants={containerVariants}
+            >
               {item.skills.map((skill, i) => (
-                <div
+                <motion.div
                   key={i}
-                  className="text-center transition-transform hover:scale-110"
+                  variants={iconVariant}
+                  whileHover={{ scale: 1.1 }}
+                  className="text-center"
                 >
-                  {typeof skill.icon === "function" ? (
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-2 rounded-full bg-[#f0f0f0] flex items-center justify-center overflow-hidden transition-transform duration-300 hover:scale-110">
-                      <skill.icon className="w-8 h-8 sm:w-10 sm:h-10 object-contain" />
-                    </div>
-                  ) : (
-                    skill.icon
-                  )}
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-2 rounded-full bg-[#f0f0f0] flex items-center justify-center overflow-hidden transition-transform duration-300">
+                    <skill.icon className="w-8 h-8 sm:w-10 sm:h-10 object-contain" />
+                  </div>
                   <p className="text-sm sm:text-base text-gray-600">
                     {skill.name}
                   </p>
-                </div>
+                </motion.div>
               ))}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         ))}
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 

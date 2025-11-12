@@ -1,12 +1,24 @@
 // src/data/projectsData.js
- import Todo1 from "../assets/Todo1.png"
- import Todo2 from "../assets/Todo2.png"
- import Todo3 from "../assets/Todo3.png"
- import Todo4 from "../assets/Todo4.png"
- import Todo5 from "../assets/Todo5.png"
- import Todo6 from "../assets/Todo6.png"
+import Todo1 from "../assets/Todo1.png";
+import Todo2 from "../assets/Todo2.png";
+import Todo3 from "../assets/Todo3.png";
+import Todo4 from "../assets/Todo4.png";
+import Todo5 from "../assets/Todo5.png";
+import Todo6 from "../assets/Todo6.png";
 
+import Food1 from "../assets/Food1.png";
+import Food2 from "../assets/Food2.png";
+import Food3 from "../assets/Food3.png";
+import Food4 from "../assets/Food4.png";
+import Food5 from "../assets/Food5.png";
+import Food6 from "../assets/Food6.png";
 
+import Weather1 from "../assets/Weather1.png";
+import Weather2 from "../assets/Weather2.png";
+import Weather3 from "../assets/Weather3.png";
+import Weather4 from "../assets/Weather4.png";
+import Weather5 from "../assets/Weather5.png";
+import Weather6 from "../assets/Weather6.png";
 
 export const projectData = [
   {
@@ -49,7 +61,7 @@ export const projectData = [
         "Sequelize-CLI",
       ],
     },
-    images:[Todo1,Todo2,Todo3,Todo4,Todo5,Todo6],
+    images: [Todo1, Todo2, Todo3, Todo4, Todo5, Todo6],
     features: [
       {
         icon: "🔐",
@@ -232,6 +244,8 @@ export const projectData = [
       ],
       Tools: ["MongoDB", "Nodemon"],
     },
+    images: [Food1, Food2, Food3, Food4, Food5, Food6],
+
     features: [
       {
         icon: "🔐",
@@ -306,6 +320,8 @@ export const projectData = [
       Frontend: ["React", "Axios", "Chart.js", "React Chartjs 2", "Vite"],
       Tools: ["WeatherAPI"],
     },
+    images: [Weather1, Weather2, Weather3, Weather4, Weather5, Weather6],
+
     features: [
       {
         icon: "🔍",
