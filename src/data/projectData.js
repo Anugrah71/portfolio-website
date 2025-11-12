@@ -64,37 +64,30 @@ export const projectData = [
     images: [Todo1, Todo2, Todo3, Todo4, Todo5, Todo6],
     features: [
       {
-        icon: "🔐",
         title: "Authentication",
         desc: "Secure user login and signup using Passport.js and bcrypt password hashing.",
       },
       {
-        icon: "🛡️",
         title: "CSRF Protection",
         desc: "Implemented CSRF protection using csurf middleware.",
       },
       {
-        icon: "✅",
         title: "Task Management",
         desc: "Full CRUD operations for managing todo items.",
       },
       {
-        icon: "📅",
         title: "Due Date Filtering",
         desc: "Todos automatically categorized into Overdue, Due Today, and Due Later sections.",
       },
       {
-        icon: "💬",
         title: "User Feedback",
         desc: "Utilizes connect-flash for displaying success and error messages.",
       },
       {
-        icon: "🧪",
         title: "Testing",
         desc: "Includes unit and integration tests written with Jest and Supertest.",
       },
     ],
-    learningJourney: `Developed this application to solidify understanding of full-stack development principles, focusing on Node.js/Express, database integration with Sequelize, user authentication workflows with Passport.js, and implementing security best practices like CSRF protection.`, // Placeholder based on features
     challenges: [
       {
         title: "Session Management",
@@ -109,12 +102,6 @@ export const projectData = [
           "Correctly associating Todos with Users in the PostgreSQL database.",
         solution:
           "Defined associations using Sequelize ORM (User hasMany Todos, Todo belongsTo User) and included userId foreign key in migrations.", // Placeholder based on models/, migrations/
-      },
-    ],
-    screenshots: [
-      {
-        src: "https://placehold.co/800x600/png?text=Todo+App+Screenshot", // Placeholder image
-        caption: "Main Todo list interface showing task categories.",
       },
     ],
     outcome: {
@@ -151,32 +138,26 @@ export const projectData = [
 
     features: [
       {
-        icon: "🔐",
         title: "Authentication",
         desc: "Secure user signup and login using JWT and bcryptjs password hashing, with input validation.",
       },
       {
-        icon: "🍔",
         title: "Food Browsing & Search",
         desc: "Displays food items fetched from the database, categorized, and searchable.",
       },
       {
-        icon: "🛒",
         title: "Shopping Cart",
         desc: "Allows users to add items with quantity/size options to a cart managed with Context API.",
       },
       {
-        icon: "🛍️",
         title: "Order Placement",
         desc: "Users can checkout their cart, saving the order details linked to their user ID.",
       },
       {
-        icon: "📜",
         title: "Order History",
         desc: "Users can view their past orders.",
       },
     ],
-    learningJourney: `This project involved building a complete MERN stack application, focusing on integrating a React frontend with a Node/Express backend via REST APIs. Key aspects included database modeling with Mongoose, implementing JWT authentication, managing application state with React Context API, and handling asynchronous data fetching.`, // Placeholder based on features
     challenges: [
       {
         title: "Context API for Cart",
@@ -191,16 +172,6 @@ export const projectData = [
           "Efficiently fetching and sending categorized food data from MongoDB to the frontend.",
         solution:
           "Created backend routes (DisplayData.js) using Mongoose to query two collections (food_items, foodCategory) and send them as a combined response for the frontend to render.", // Placeholder based on backend/db.js, backend/Routes/DisplayData.js
-      },
-    ],
-    screenshots: [
-      {
-        src: "https://placehold.co/800x600/png?text=Food+Home+Page",
-        caption: "Homepage displaying food categories and items.",
-      },
-      {
-        src: "https://placehold.co/800x600/png?text=Shopping+Cart",
-        caption: "Shopping cart view with selected items.",
       },
     ],
     outcome: {
@@ -227,32 +198,26 @@ export const projectData = [
 
     features: [
       {
-        icon: "🔍",
         title: "City Search",
         desc: "Search for weather information by city name.",
       },
       {
-        icon: "☀️",
         title: "Current Weather",
         desc: "Displays current temperature, condition, humidity, wind speed, pressure, feels like temp, and UV index.",
       },
       {
-        icon: "💨",
         title: "Air Quality Index",
         desc: "Shows the current Air Quality Index (AQI) data.",
       },
       {
-        icon: "📅",
         title: "Weather Forecast",
         desc: "Provides a multi-day weather forecast.",
       },
       {
-        icon: "📈",
         title: "Temperature Chart",
         desc: "Visualizes the temperature forecast for the next 24 hours using Chart.js.",
       },
     ],
-    learningJourney: `Developed this application to practice fetching data from external APIs in React, managing asynchronous operations, and displaying data dynamically. Focused on using Axios for API calls and integrating Chart.js for data visualization.`, // Placeholder based on features
     challenges: [
       {
         title: "API Integration",
@@ -267,16 +232,6 @@ export const projectData = [
           "Extracting and formatting the hourly forecast data correctly for use with Chart.js.",
         solution:
           "Processed the forecast data received from the API to create arrays for labels (time) and data points (temperature) suitable for the Chart.js line chart component.", // Placeholder based on TemperatureChart.jsx, Home.jsx
-      },
-    ],
-    screenshots: [
-      {
-        src: "https://placehold.co/800x600/png?text=Weather+App+Main", // Placeholder image
-        caption: "Main interface showing current weather and forecast.",
-      },
-      {
-        src: "https://placehold.co/800x600/png?text=Temperature+Chart", // Placeholder image
-        caption: "Hourly temperature forecast chart.",
       },
     ],
     outcome: {
