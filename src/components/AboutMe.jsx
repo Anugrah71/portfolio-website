@@ -47,7 +47,7 @@ const boxVariant = {
 
 const AboutMe = () => {
   return (
-   <motion.section variants={containerVariants} initial="hidden" whileInView="show">
+   <motion.section variants={containerVariants} initial="hidden" whileInView="show"    id="about">
 
       <motion.h2
         className="section-title text-center mb-12"
