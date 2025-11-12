@@ -1,6 +1,6 @@
 import HtmlIcon from "./HTML5.svg?react";
 import CSS3Icon from "./CSS3.svg?react";
-import JSIcon from "./javaScript.svg?react";
+import JSIcon from "./JavaScript.svg?react";
 import TailwindIcon from "./TailwindCSS.svg?react";
 import BootstrapIcon from "./Bootstrap.svg?react";
 import TypeScriptIcon from "./TypeScript.svg?react";
