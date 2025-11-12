@@ -10,7 +10,7 @@ import NodeJsIcon from "./Nodejs.svg?react";
 import ExpressIcon from "./Express.svg?react";
 import MongoDBIcon from "./MongoDB.svg?react";
 import GitIcon from "./Git.svg?react";
-import GithubIcon from "./Github.svg?react";
+import GithubIcon from "./GitHub.svg?react";
 import NpmIcon from "./NPM.svg?react";
  import EmailIcon from "./email.svg?react";
 import PhoneIcon from "./Phone.svg?react";
