@@ -122,110 +122,13 @@ export const projectData = [
       improvements: `Future enhancements could include adding email notifications for due dates, implementing more complex filtering/sorting options, or migrating the frontend to a framework like React or Vue.`, // Placeholder
     },
   },
-  // {
-  //   id: 2,
-  //   title: "Finance Tracker",
-  //   description:
-  //     "A full-stack MERN application for tracking personal income and expenses with user authentication and data visualization.",
-  //   imageUrl: "../src/assets/img4.png",
-  //   tagline:
-  //     "A secure personal finance tracker built with React, Node.js, Express, and MongoDB.",
-  //   liveDemo: "#",
-  //   github: "#",
-  //   overview: `A full-stack application enabling users to register, log in, and manage their financial transactions (income and expenses). Features include adding, viewing, filtering (by type and category), and deleting transactions. It calculates and displays total income, total expenses, and the current balance. Includes data visualization with a pie chart showing the income vs. expense ratio. Built with Node.js, Express, and MongoDB on the backend, using Mongoose ODM. The frontend is built with React, using Axios for API calls, Bootstrap for styling, and Chart.js for visualization. Authentication is handled using JWT and bcrypt for password hashing.`, // Derived from multiple files
-  //   stack: [
-  //     "MongoDB",
-  //     "Express.js",
-  //     "React",
-  //     "Node.js",
-  //     "Chart.js",
-  //     "Bootstrap",
-  //   ],
-  //   techStack: {
-  //     Frontend: [
-  //       "React",
-  //       "React Router",
-  //       "Axios",
-  //       "Bootstrap",
-  //       "Chart.js",
-  //       "React Chartjs 2",
-  //     ],
-  //     Backend: [
-  //       "Node.js",
-  //       "Express.js",
-  //       "Mongoose",
-  //       "JWT",
-  //       "bcryptjs",
-  //       "cors",
-  //       "dotenv",
-  //     ],
-  //     Tools: ["MongoDB", "Nodemon"],
-  //   },
-  //   features: [
-  //     {
-  //       icon: "🔐",
-  //       title: "Authentication",
-  //       desc: "Secure user registration and login using JWT and bcryptjs password hashing.",
-  //     },
-  //     {
-  //       icon: "💸",
-  //       title: "Transaction Management",
-  //       desc: "Full CRUD operations for income and expense transactions.",
-  //     },
-  //     {
-  //       icon: "📊",
-  //       title: "Dashboard Summary",
-  //       desc: "Displays total income, total expenses, and current balance.",
-  //     },
-  //     {
-  //       icon: "📈",
-  //       title: "Data Visualization",
-  //       desc: "Pie chart showing the distribution of income vs. expenses using Chart.js.",
-  //     },
-  //     {
-  //       icon: "🔍",
-  //       title: "Filtering",
-  //       desc: "Filter transactions by type (income/expense) and category.",
-  //     },
-  //   ],
-  //   learningJourney: `This project focuses on building a MERN stack application with JWT authentication and data visualization. Key learning points include creating RESTful APIs with Express, interacting with MongoDB using Mongoose, managing user state with React, and integrating a charting library.`, // Placeholder based on features
-  //   challenges: [
-  //     {
-  //       title: "JWT Authentication Flow",
-  //       problem:
-  //         "Implementing secure token generation, verification, and passing tokens between frontend and backend.",
-  //       solution:
-  //         "Used JWT for token creation on login/register, Bearer tokens in Authorization headers for protected routes, and middleware on the backend to verify tokens.", // Placeholder based on server/middleware/auth.js, client/src/utils/api.js
-  //     },
-  //     {
-  //       title: "State Management in React",
-  //       problem:
-  //         "Efficiently managing and updating the list of transactions on the dashboard after additions or deletions.",
-  //       solution:
-  //         "Utilized React's useState hook to manage the transactions array and passed callback functions (onAdd, onDelete) down to child components to update the state in the parent Dashboard component.", // Placeholder based on client/src/pages/Dashboard.js
-  //     },
-  //   ],
-  //   screenshots: [
-  //     {
-  //       src: "https://placehold.co/800x600/png?text=Finance+Dashboard", // Placeholder image
-  //       caption: "Dashboard view showing summary and transaction list.",
-  //     },
-  //     {
-  //       src: "https://placehold.co/800x600/png?text=Income+vs+Expense+Chart", // Placeholder image
-  //       caption: "Pie chart visualizing income and expenses.",
-  //     },
-  //   ],
-  //   outcome: {
-  //     learned: `Strengthened MERN stack development skills, particularly in API creation, database modeling with Mongoose, JWT authentication, and integrating React with backend services. Gained experience with Chart.js for data visualization.`, // Placeholder
-  //     improvements: `Future improvements could involve adding more detailed reporting (e.g., spending by category over time), implementing budget tracking features, or adding data export functionality.`, // Placeholder
-  //   },
-  // },
+  
   {
-    id: 3,
+    id: 2,
     title: "Food Website",
     description:
       "A full-stack MERN application for browsing food items, adding them to a cart, and placing orders, with user authentication.",
-    imageUrl: "../src/assets/Food2.png",
+    imageUrl: Food1,
     tagline:
       "A food ordering platform built with React, Node.js, Express, and MongoDB.",
     liveDemo: "https://food-website-1-ck7j.onrender.com",
@@ -306,11 +209,11 @@ export const projectData = [
     },
   },
   {
-    id: 4,
+    id: 3,
     title: "React Weather App",
     description:
       "A React application that fetches and displays current weather data, forecasts, and air quality information based on user search.",
-    imageUrl: "../src/assets/Weather3.png",
+    imageUrl: Weather1,
     tagline: "A weather dashboard built with React and the WeatherAPI.",
     liveDemo: "https://react-weather-app-five-iota.vercel.app/",
     github: "https://github.com/Anugrah71/React-Weather-App",
