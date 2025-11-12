@@ -29,7 +29,7 @@ const ContactMe = () => {
   };
   return (
     <>
-      <section className="skills bg-[#f8f8f8] py-20 px-5 sm:px-10 md:px-20">
+<section className="relative z-0 bg-white bg-[#f8f8f8] text-black text-center px-4 sm:px-10 md:px-20 pt-20 sm:pt-24 mt-12 sm:mt-0">
         <h2 className="section-title text-3xl sm:text-4xl md:text-5xl text-center mb-4 mt-2 font-bold">
           Contact <span className="text-[#333]">Me</span>
         </h2>
