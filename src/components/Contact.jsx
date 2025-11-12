@@ -61,6 +61,7 @@ const cardVariant = {
 const Contact = () => {
   return (
     <motion.section
+      id="contact"
       variants={containerVariants}
       initial="hidden"
       whileInView="show"

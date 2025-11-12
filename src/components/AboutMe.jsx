@@ -51,6 +51,7 @@ const AboutMe = () => {
 
       <motion.h2
         className="section-title text-center mb-12"
+            id="about"
         variants={rightFade}
       >
         About <span>Me</span>
