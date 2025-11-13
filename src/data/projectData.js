@@ -64,37 +64,30 @@ export const projectData = [
     images: [Todo1, Todo2, Todo3, Todo4, Todo5, Todo6],
     features: [
       {
-        icon: "🔐",
         title: "Authentication",
         desc: "Secure user login and signup using Passport.js and bcrypt password hashing.",
       },
       {
-        icon: "🛡️",
         title: "CSRF Protection",
         desc: "Implemented CSRF protection using csurf middleware.",
       },
       {
-        icon: "✅",
         title: "Task Management",
         desc: "Full CRUD operations for managing todo items.",
       },
       {
-        icon: "📅",
         title: "Due Date Filtering",
         desc: "Todos automatically categorized into Overdue, Due Today, and Due Later sections.",
       },
       {
-        icon: "💬",
         title: "User Feedback",
         desc: "Utilizes connect-flash for displaying success and error messages.",
       },
       {
-        icon: "🧪",
         title: "Testing",
         desc: "Includes unit and integration tests written with Jest and Supertest.",
       },
     ],
-    learningJourney: `Developed this application to solidify understanding of full-stack development principles, focusing on Node.js/Express, database integration with Sequelize, user authentication workflows with Passport.js, and implementing security best practices like CSRF protection.`, // Placeholder based on features
     challenges: [
       {
         title: "Session Management",
@@ -111,121 +104,18 @@ export const projectData = [
           "Defined associations using Sequelize ORM (User hasMany Todos, Todo belongsTo User) and included userId foreign key in migrations.", // Placeholder based on models/, migrations/
       },
     ],
-    screenshots: [
-      {
-        src: "https://placehold.co/800x600/png?text=Todo+App+Screenshot", // Placeholder image
-        caption: "Main Todo list interface showing task categories.",
-      },
-    ],
     outcome: {
       learned: `Gained practical experience in building a secure, authenticated web application with Node.js, Express, Sequelize, and EJS. Improved skills in testing backend routes and implementing security measures.`, // Placeholder
       improvements: `Future enhancements could include adding email notifications for due dates, implementing more complex filtering/sorting options, or migrating the frontend to a framework like React or Vue.`, // Placeholder
     },
   },
-  // {
-  //   id: 2,
-  //   title: "Finance Tracker",
-  //   description:
-  //     "A full-stack MERN application for tracking personal income and expenses with user authentication and data visualization.",
-  //   imageUrl: "../src/assets/img4.png",
-  //   tagline:
-  //     "A secure personal finance tracker built with React, Node.js, Express, and MongoDB.",
-  //   liveDemo: "#",
-  //   github: "#",
-  //   overview: `A full-stack application enabling users to register, log in, and manage their financial transactions (income and expenses). Features include adding, viewing, filtering (by type and category), and deleting transactions. It calculates and displays total income, total expenses, and the current balance. Includes data visualization with a pie chart showing the income vs. expense ratio. Built with Node.js, Express, and MongoDB on the backend, using Mongoose ODM. The frontend is built with React, using Axios for API calls, Bootstrap for styling, and Chart.js for visualization. Authentication is handled using JWT and bcrypt for password hashing.`, // Derived from multiple files
-  //   stack: [
-  //     "MongoDB",
-  //     "Express.js",
-  //     "React",
-  //     "Node.js",
-  //     "Chart.js",
-  //     "Bootstrap",
-  //   ],
-  //   techStack: {
-  //     Frontend: [
-  //       "React",
-  //       "React Router",
-  //       "Axios",
-  //       "Bootstrap",
-  //       "Chart.js",
-  //       "React Chartjs 2",
-  //     ],
-  //     Backend: [
-  //       "Node.js",
-  //       "Express.js",
-  //       "Mongoose",
-  //       "JWT",
-  //       "bcryptjs",
-  //       "cors",
-  //       "dotenv",
-  //     ],
-  //     Tools: ["MongoDB", "Nodemon"],
-  //   },
-  //   features: [
-  //     {
-  //       icon: "🔐",
-  //       title: "Authentication",
-  //       desc: "Secure user registration and login using JWT and bcryptjs password hashing.",
-  //     },
-  //     {
-  //       icon: "💸",
-  //       title: "Transaction Management",
-  //       desc: "Full CRUD operations for income and expense transactions.",
-  //     },
-  //     {
-  //       icon: "📊",
-  //       title: "Dashboard Summary",
-  //       desc: "Displays total income, total expenses, and current balance.",
-  //     },
-  //     {
-  //       icon: "📈",
-  //       title: "Data Visualization",
-  //       desc: "Pie chart showing the distribution of income vs. expenses using Chart.js.",
-  //     },
-  //     {
-  //       icon: "🔍",
-  //       title: "Filtering",
-  //       desc: "Filter transactions by type (income/expense) and category.",
-  //     },
-  //   ],
-  //   learningJourney: `This project focuses on building a MERN stack application with JWT authentication and data visualization. Key learning points include creating RESTful APIs with Express, interacting with MongoDB using Mongoose, managing user state with React, and integrating a charting library.`, // Placeholder based on features
-  //   challenges: [
-  //     {
-  //       title: "JWT Authentication Flow",
-  //       problem:
-  //         "Implementing secure token generation, verification, and passing tokens between frontend and backend.",
-  //       solution:
-  //         "Used JWT for token creation on login/register, Bearer tokens in Authorization headers for protected routes, and middleware on the backend to verify tokens.", // Placeholder based on server/middleware/auth.js, client/src/utils/api.js
-  //     },
-  //     {
-  //       title: "State Management in React",
-  //       problem:
-  //         "Efficiently managing and updating the list of transactions on the dashboard after additions or deletions.",
-  //       solution:
-  //         "Utilized React's useState hook to manage the transactions array and passed callback functions (onAdd, onDelete) down to child components to update the state in the parent Dashboard component.", // Placeholder based on client/src/pages/Dashboard.js
-  //     },
-  //   ],
-  //   screenshots: [
-  //     {
-  //       src: "https://placehold.co/800x600/png?text=Finance+Dashboard", // Placeholder image
-  //       caption: "Dashboard view showing summary and transaction list.",
-  //     },
-  //     {
-  //       src: "https://placehold.co/800x600/png?text=Income+vs+Expense+Chart", // Placeholder image
-  //       caption: "Pie chart visualizing income and expenses.",
-  //     },
-  //   ],
-  //   outcome: {
-  //     learned: `Strengthened MERN stack development skills, particularly in API creation, database modeling with Mongoose, JWT authentication, and integrating React with backend services. Gained experience with Chart.js for data visualization.`, // Placeholder
-  //     improvements: `Future improvements could involve adding more detailed reporting (e.g., spending by category over time), implementing budget tracking features, or adding data export functionality.`, // Placeholder
-  //   },
-  // },
+  
   {
-    id: 3,
+    id: 2,
     title: "Food Website",
     description:
       "A full-stack MERN application for browsing food items, adding them to a cart, and placing orders, with user authentication.",
-    imageUrl: "../src/assets/Food2.png",
+    imageUrl: Food1,
     tagline:
       "A food ordering platform built with React, Node.js, Express, and MongoDB.",
     liveDemo: "https://food-website-1-ck7j.onrender.com",
@@ -248,32 +138,26 @@ export const projectData = [
 
     features: [
       {
-        icon: "🔐",
         title: "Authentication",
         desc: "Secure user signup and login using JWT and bcryptjs password hashing, with input validation.",
       },
       {
-        icon: "🍔",
         title: "Food Browsing & Search",
         desc: "Displays food items fetched from the database, categorized, and searchable.",
       },
       {
-        icon: "🛒",
         title: "Shopping Cart",
         desc: "Allows users to add items with quantity/size options to a cart managed with Context API.",
       },
       {
-        icon: "🛍️",
         title: "Order Placement",
         desc: "Users can checkout their cart, saving the order details linked to their user ID.",
       },
       {
-        icon: "📜",
         title: "Order History",
         desc: "Users can view their past orders.",
       },
     ],
-    learningJourney: `This project involved building a complete MERN stack application, focusing on integrating a React frontend with a Node/Express backend via REST APIs. Key aspects included database modeling with Mongoose, implementing JWT authentication, managing application state with React Context API, and handling asynchronous data fetching.`, // Placeholder based on features
     challenges: [
       {
         title: "Context API for Cart",
@@ -290,27 +174,17 @@ export const projectData = [
           "Created backend routes (DisplayData.js) using Mongoose to query two collections (food_items, foodCategory) and send them as a combined response for the frontend to render.", // Placeholder based on backend/db.js, backend/Routes/DisplayData.js
       },
     ],
-    screenshots: [
-      {
-        src: "https://placehold.co/800x600/png?text=Food+Home+Page",
-        caption: "Homepage displaying food categories and items.",
-      },
-      {
-        src: "https://placehold.co/800x600/png?text=Shopping+Cart",
-        caption: "Shopping cart view with selected items.",
-      },
-    ],
     outcome: {
       learned: `Gained experience in building a functional e-commerce type application with the MERN stack, focusing on user authentication, state management, and API integration. Practiced using Mongoose for database interactions.`, // Placeholder
       improvements: `Could add features like payment gateway integration, user profile management, admin panel for managing food items, or real-time order status updates.`, // Placeholder
     },
   },
   {
-    id: 4,
+    id: 3,
     title: "React Weather App",
     description:
       "A React application that fetches and displays current weather data, forecasts, and air quality information based on user search.",
-    imageUrl: "../src/assets/Weather3.png",
+    imageUrl: Weather1,
     tagline: "A weather dashboard built with React and the WeatherAPI.",
     liveDemo: "https://react-weather-app-five-iota.vercel.app/",
     github: "https://github.com/Anugrah71/React-Weather-App",
@@ -324,32 +198,26 @@ export const projectData = [
 
     features: [
       {
-        icon: "🔍",
         title: "City Search",
         desc: "Search for weather information by city name.",
       },
       {
-        icon: "☀️",
         title: "Current Weather",
         desc: "Displays current temperature, condition, humidity, wind speed, pressure, feels like temp, and UV index.",
       },
       {
-        icon: "💨",
         title: "Air Quality Index",
         desc: "Shows the current Air Quality Index (AQI) data.",
       },
       {
-        icon: "📅",
         title: "Weather Forecast",
         desc: "Provides a multi-day weather forecast.",
       },
       {
-        icon: "📈",
         title: "Temperature Chart",
         desc: "Visualizes the temperature forecast for the next 24 hours using Chart.js.",
       },
     ],
-    learningJourney: `Developed this application to practice fetching data from external APIs in React, managing asynchronous operations, and displaying data dynamically. Focused on using Axios for API calls and integrating Chart.js for data visualization.`, // Placeholder based on features
     challenges: [
       {
         title: "API Integration",
@@ -364,16 +232,6 @@ export const projectData = [
           "Extracting and formatting the hourly forecast data correctly for use with Chart.js.",
         solution:
           "Processed the forecast data received from the API to create arrays for labels (time) and data points (temperature) suitable for the Chart.js line chart component.", // Placeholder based on TemperatureChart.jsx, Home.jsx
-      },
-    ],
-    screenshots: [
-      {
-        src: "https://placehold.co/800x600/png?text=Weather+App+Main", // Placeholder image
-        caption: "Main interface showing current weather and forecast.",
-      },
-      {
-        src: "https://placehold.co/800x600/png?text=Temperature+Chart", // Placeholder image
-        caption: "Hourly temperature forecast chart.",
       },
     ],
     outcome: {
