@@ -83,7 +83,7 @@ const Skills = () => {
       variants={containerVariants}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true }}
     >
       <motion.h2
         className="section-title text-3xl sm:text-4xl md:text-5xl text-center mb-16 font-bold"

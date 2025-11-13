@@ -1,11 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  GithubIcon,
-  LinkedInIcon,
-  LocationIcon,
-  PhoneIcon,
-  EmailIcon,
-} from "../assets/icons";
+
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -51,6 +45,7 @@ const AboutMe = () => {
       variants={containerVariants}
       initial="hidden"
       whileInView="show"
+      viewport={{ once: true }}
       id="about"
     >
       <motion.h2
