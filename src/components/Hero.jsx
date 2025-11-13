@@ -55,9 +55,8 @@ const Hero = () => {
 
       <motion.div
         variants={itemVariants}
-        className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-2 mb-10"
+        className="flex flex-col sm:flex-row gap-4 sm:gap-6  lg:gap-2 mb-10"
       >
-        {/* Resume Button */}
         <motion.a
           href={ResumePDF}
           download
@@ -71,7 +70,6 @@ const Hero = () => {
           <span className="absolute inset-0 bg-[#333] origin-bottom scale-y-0 transition-transform duration-300 group-hover:scale-y-100"></span>
         </motion.a>
 
-        {/* Contact Button */}
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Link
             to="/ContactMe"

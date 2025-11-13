@@ -65,7 +65,6 @@ const Contact = () => {
       variants={containerVariants}
       initial="hidden"
       whileInView="show"
-      id="contact"
       viewport={{ once: true, amount: 0.2 }}
     >
       <motion.h2

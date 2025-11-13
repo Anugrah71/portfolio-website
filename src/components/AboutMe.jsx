@@ -47,11 +47,15 @@ const boxVariant = {
 
 const AboutMe = () => {
   return (
-   <motion.section variants={containerVariants} initial="hidden" whileInView="show"    id="about">
-
+    <motion.section
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="show"
+      id="about"
+    >
       <motion.h2
         className="section-title text-center mb-12"
-            id="about"
+        id="about"
         variants={rightFade}
       >
         About <span>Me</span>
@@ -117,8 +121,8 @@ const AboutMe = () => {
           >
             {[
               { title: "Degree", text: "BCA (2025)" },
-              { title: "Projects", text: "Full-Stack Applications" },
-              { title: "Focus", text: "System Architecture & UX" },
+              { title: "Projects", text: "Full-Stack Development" },
+              { title: "Focus", text: "Clean UI & Reliable Backend" },
             ].map((item, i) => (
               <motion.div
                 key={i}
