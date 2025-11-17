@@ -13,6 +13,16 @@ import Food4 from "../assets/Food4.png";
 import Food5 from "../assets/Food5.png";
 import Food6 from "../assets/Food6.png";
 
+import Quick1 from "../assets/Quick1.png";
+import Quick2 from "../assets/Quick2.png";
+import Quick3 from "../assets/Quick3.png";
+import Quick4 from "../assets/Quick4.png";
+import Quick5 from "../assets/Quick5.png";
+import Quick6 from "../assets/Quick6.png";
+import Quick7 from "../assets/Quick7.png";
+import Quick8 from "../assets/Quick8.png";
+import Quick9 from "../assets/Quick9.png";
+
 import Weather1 from "../assets/Weather1.png";
 import Weather2 from "../assets/Weather2.png";
 import Weather3 from "../assets/Weather3.png";
@@ -109,7 +119,7 @@ export const projectData = [
       improvements: `Future enhancements could include adding email notifications for due dates, implementing more complex filtering/sorting options, or migrating the frontend to a framework like React or Vue.`, // Placeholder
     },
   },
-  
+
   {
     id: 2,
     title: "Food Website",
@@ -237,6 +247,112 @@ export const projectData = [
     outcome: {
       learned: `Improved skills in fetching and handling data from third-party APIs in a React application. Gained experience with data visualization using Chart.js and managing component state effectively.`, // Placeholder
       improvements: `Could enhance the app by adding geolocation to get weather for the user's current location, allowing users to save favorite locations, or adding more detailed charts (e.g., precipitation probability).`, // Placeholder
+    },
+  },
+  {
+    id: 4,
+    title: "AI Content Creation Platform",
+    description:
+      "A full-stack MERN application that leverages multiple AI APIs to help users create articles, generate images, and analyze documents.",
+    imageUrl: Quick1,
+    tagline:
+      "A full-stack AI suite for content generation, image manipulation, and document analysis.",
+    liveDemo: null,
+    github: "https://github.com/anugrah71/react-ai-app",
+    overview: `This AI-powered content creation platform is a full-stack MERN application that leverages artificial intelligence to help users create various types of content. The platform provides a suite of AI tools for content generation (articles, blog titles), image manipulation (AI image generation, background removal, object removal), and document analysis (resume reviewer). It features a secure user authentication system using Clerk, with a free plan limited by usage counts stored in user metadata. The backend is built with Node.js/Express and communicates with multiple APIs (OpenAI/Gemini, Clipdrop, Cloudinary) to perform AI tasks, storing user creations in a PostgreSQL database (Neon). The frontend is a responsive React application built with Vite, using React Router for navigation and Axios for API communication.`,
+    stack: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Cloudinary",
+      "OpenAI",
+    ],
+    techStack: {
+      Frontend: [
+        "React",
+        "Vite",
+        "React Router Dom",
+        "TailwindCSS",
+        "Axios",
+        "Lucide React",
+        "AOS (Animate On Scroll)",
+        "React Hot Toast",
+        "React Markdown",
+      ],
+      Backend: [
+        "Node.js",
+        "Express.js",
+        "Clerk (Authentication)",
+        "OpenAI (Gemini API)",
+        "Cloudinary (Image Manipulation/Storage)",
+        "Clipdrop (Image Generation)",
+        "Multer (File Uploads)",
+        "pdf-parse (Resume Parsing)",
+        "Neon (PostgreSQL)",
+      ],
+      Tools: [
+        "Clerk",
+        "Cloudinary",
+        "OpenAI API",
+        "Vercel (Deployment)",
+        "Nodemon",
+      ],
+    },
+    images: [
+      Quick1,
+      Quick2,
+      Quick3,
+      Quick4,
+      Quick5,
+      Quick6,
+      Quick7,
+      Quick8,
+      Quick9,
+    ],
+    features: [
+      {
+        title: "User Authentication",
+        desc: "Secure login/signup and user management handled by Clerk, including premium/free plan logic.",
+      },
+      {
+        title: "AI Article Writer",
+        desc: "Generates full articles based on a topic and selected length (Short, Medium, Long) using the Gemini API.",
+      },
+      {
+        title: "AI Image Generation",
+        desc: "Creates images from text prompts and style selections using the Clipdrop API.",
+      },
+      {
+        title: "Image Background Removal",
+        desc: "Upload an image to automatically remove the background using Cloudinary's AI transformation.",
+      },
+      {
+        title: "Image Object Removal",
+        desc: "Upload an image and specify an object to remove, processed by Cloudinary's generative remove feature.",
+      },
+      {
+        title: "AI Resume Reviewer",
+        desc: "Upload a PDF resume to receive a detailed analysis and constructive feedback from the Gemini API.",
+      },
+      {
+        title: "Text Summarizer",
+        desc: "Pastes long-form text to generate a concise summary using the Gemini API.",
+      },
+      {
+        title: "Community Page",
+        desc: "Users can publish their generated images to a community feed, with features to sort by 'recent' or 'popular' (most liked).",
+      },
+      {
+        title: "Usage & Plan Limits",
+        desc: "Free users are limited to 10 creations; this is tracked via Clerk's public metadata.",
+      },
+    ],
+    outcome: {
+      learned:
+        "Gained advanced skills in React hooks, API integration (RESTful APIs, auth), and full-stack development communication. Practiced secure user management with Clerk, media management with Cloudinary, and integrating multiple third-party AI APIs (OpenAI, Cloudinary).",
+      improvements:
+        "The `README.md` suggests future enhancements like adding more AI tools (summarizer, filters), improving the UI/animations, adding a 'Save' or 'Download' feature for content, and optimizing image loading.",
     },
   },
 ];

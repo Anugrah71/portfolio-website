@@ -146,7 +146,7 @@ const Project = () => {
 
      
       {/*  CHALLENGES & SOLUTIONS  */}
-      <section className="py-14 sm:py-20 px-4 sm:px-10 md:px-20 bg-[#f8f8f8]">
+    {project.challenges ?  <section className="py-14 sm:py-20 px-4 sm:px-10 md:px-20 bg-[#f8f8f8]">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-gray-900 text-center">
             Challenges & Solutions
@@ -168,7 +168,7 @@ const Project = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section>: ""}
 
       {/* OUTCOME */}
       <section className="py-14 sm:py-20 px-4 sm:px-10 md:px-20 bg-white">
