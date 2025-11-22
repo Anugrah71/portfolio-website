@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
-import ResumePDF from "/resume.pdf";
+import ResumePDF from "/Full_Stack_Developer.pdf";
 import { Link } from "react-router-dom";
 
 const containerVariants = {
@@ -87,7 +87,7 @@ const Hero = () => {
         variants={itemVariants}
         className="max-w-[700px] text-[0.95rem] sm:text-[1rem] md:text-[1.1rem] leading-relaxed text-[#555]"
       >
-        I think beyond just features — I care about how every decision affects
+        I think beyond just features, I care about how every decision affects
         performance, design, and the overall experience. For me, good
         development is about building something that feels right to use.
       </motion.p>
