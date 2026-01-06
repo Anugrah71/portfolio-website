@@ -318,7 +318,7 @@ export const projectData = [
   //   },
   // },
   {
-    id: 2,
+    id: 3,
     title: "Food Website",
     description:
       "A full-stack MERN application for browsing food items, adding them to a cart, and placing orders, with user authentication.",
@@ -388,7 +388,7 @@ export const projectData = [
   },
 
   {
-    id: 1,
+    id: 4,
     title: "Todo App",
     description:
       "A full-stack application for managing tasks with user authentication and session management using Node.js, Express, PostgreSQL, and EJS.",
