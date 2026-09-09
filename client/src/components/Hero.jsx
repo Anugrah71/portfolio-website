@@ -1,7 +1,8 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import { ArrowRight, Download } from "lucide-react";
+import { getActiveResume } from "../services/api";
 import {
   ReactIcon,
   NextJsIcon,
@@ -60,6 +61,20 @@ const floatingIcons = [
 
 const Hero = () => {
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
+  const [resumeData, setResumeData] = useState({
+    fileUrl: "/Anugrah_K_Resume.pdf",
+    fileName: "Anugrah_K_Resume.pdf",
+  });
+
+  useEffect(() => {
+    getActiveResume()
+      .then((data) => {
+        if (data && data.fileUrl) {
+          setResumeData(data);
+        }
+      })
+      .catch((err) => console.warn("Using fallback resume:", err));
+  }, []);
 
   const handleMouseMove = useCallback((e) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -145,13 +160,13 @@ const Hero = () => {
           className="flex flex-col sm:flex-row items-center gap-4 mb-8"
         >
           <motion.a
-            href="/Anugrah_K_Resume.pdf"
-            download="Anugrah_K_Resume.pdf"
+            href={resumeData.fileUrl || "/Anugrah_K_Resume.pdf"}
+            download={resumeData.fileName || "Anugrah_K_Resume.pdf"}
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
-            className="w-full sm:w-auto px-8 py-3.5 bg-[#7C6CFF] hover:bg-[#6b59ff] text-white font-bold rounded-xl shadow-lg transition-all duration-300 inline-flex items-center justify-center gap-2 text-sm sm:text-base"
+            className="w-full sm:w-auto px-8 py-3.5 bg-[#7C6CFF] hover:bg-[#6b59ff] text-white font-bold rounded-xl shadow-lg transition-all duration-300 inline-flex items-center justify-center gap-2 text-sm sm:text-base cursor-pointer"
           >
             <Download size={18} /> Download Resume
           </motion.a>

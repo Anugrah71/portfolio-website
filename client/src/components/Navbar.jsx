@@ -9,7 +9,8 @@ const Navbar = () => {
 
   const isStandalonePage =
     location.pathname.startsWith("/project") ||
-    location.pathname.startsWith("/ContactMe");
+    location.pathname.startsWith("/ContactMe") ||
+    location.pathname.startsWith("/admin");
 
   const handleLinkClick = () => {
     setIsOpen(false);

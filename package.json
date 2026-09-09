@@ -1,43 +1,13 @@
 {
-  "name": "portfolio-website",
+  "name": "portfolio-monorepo",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@emailjs/browser": "^4.4.1",
-    "autoprefixer": "^10.4.21",
-    "cors": "^2.8.6",
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1",
-    "framer-motion": "^12.23.24",
-    "lucide-react": "^0.553.0",
-    "nodemailer": "^9.0.5",
-    "postcss": "^8.5.6",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "react-router-dom": "^7.9.4",
-    "react-scroll": "^1.9.3",
-    "swiper": "^12.0.3",
-    "typewriter-effect": "^2.22.0"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.36.0",
-    "@tailwindcss/vite": "^4.1.14",
-    "@types/react": "^19.1.16",
-    "@types/react-dom": "^19.1.9",
-    "@vitejs/plugin-react": "^5.0.4",
-    "eslint": "^9.36.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.22",
-    "globals": "^16.4.0",
-    "tailwindcss": "^4.1.14",
-    "vite": "^7.1.7",
-    "vite-plugin-svgr": "^4.5.0"
+    "client": "npm --prefix client run dev",
+    "server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "dev:server": "npm --prefix server run dev",
+    "build:client": "npm --prefix client run build",
+    "start:server": "npm --prefix server start"
   }
 }

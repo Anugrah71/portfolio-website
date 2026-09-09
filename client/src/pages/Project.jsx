@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { projectData } from "../data/projectData";
+import { getProjectById } from "../services/api";
 import { useParams, useNavigate } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -17,8 +18,36 @@ const Project = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    const found = projectData.find((p) => p.id === Number(id));
-    setProject(found);
+    // Instant fallback from bundled projects
+    const localFound = projectData.find((p) => p.id === Number(id));
+    if (localFound) setProject(localFound);
+
+    // Fetch latest data from database
+    getProjectById(id).then((apiProject) => {
+      if (apiProject) {
+        if (localFound) {
+          const hasCustomUpload =
+            apiProject.imageUrl &&
+            !apiProject.imageUrl.includes("unsplash.com") &&
+            !apiProject.imageUrl.includes("photo-") &&
+            apiProject.imageUrl.startsWith("http");
+
+          setProject({
+            ...apiProject,
+            imageUrl: hasCustomUpload ? apiProject.imageUrl : localFound.imageUrl,
+            images:
+              apiProject.images &&
+              apiProject.images.length > 0 &&
+              !apiProject.images[0].includes("unsplash.com") &&
+              apiProject.images[0].startsWith("http")
+                ? apiProject.images
+                : localFound.images,
+          });
+        } else {
+          setProject(apiProject);
+        }
+      }
+    });
   }, [id]);
 
   if (!project) {

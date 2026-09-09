@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { projectData } from "../data/projectData";
+import { getProjects } from "../services/api";
 import { useNavigate } from "react-router-dom";
 import TiltCard from "./TiltCard";
 import { Zap, ExternalLink, Github, ArrowRight } from "lucide-react";
@@ -27,6 +28,39 @@ const cardVariant = {
 
 const Projects = () => {
   const navigate = useNavigate();
+  const [projects, setProjects] = useState(projectData);
+
+  useEffect(() => {
+    getProjects().then((data) => {
+      if (data && Array.isArray(data) && data.length > 0) {
+        // Merge with local assets from src/assets/ for existing projects
+        const resolved = data.map((item) => {
+          const local = projectData.find((p) => p.id === item.id);
+          if (local) {
+            const hasCustomUpload =
+              item.imageUrl &&
+              !item.imageUrl.includes("unsplash.com") &&
+              !item.imageUrl.includes("photo-") &&
+              item.imageUrl.startsWith("http");
+
+            return {
+              ...item,
+              imageUrl: hasCustomUpload ? item.imageUrl : local.imageUrl,
+              images:
+                item.images &&
+                item.images.length > 0 &&
+                !item.images[0].includes("unsplash.com") &&
+                item.images[0].startsWith("http")
+                  ? item.images
+                  : local.images,
+            };
+          }
+          return item;
+        });
+        setProjects(resolved);
+      }
+    });
+  }, []);
 
   return (
     <motion.section
@@ -48,7 +82,7 @@ const Projects = () => {
         className="grid gap-8 sm:gap-10 md:gap-12 grid-cols-1 lg:grid-cols-2 max-w-7xl mx-auto"
         variants={containerVariants}
       >
-        {[...projectData].sort((a, b) => b.id - a.id).map((item) => (
+        {[...projects].sort((a, b) => (a.order || 0) - (b.order || 0) || b.id - a.id).map((item) => (
           <motion.div key={item.id} variants={cardVariant}>
             <TiltCard
               onClick={() => navigate(`/project/${item.id}`)}
