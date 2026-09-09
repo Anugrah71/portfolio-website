@@ -1,7 +1,17 @@
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+// In local development, use localhost:5000. In production, require VITE_API_URL to prevent unwanted localhost network requests.
+const API_URL =
+  import.meta.env.VITE_API_URL || (import.meta.env.DEV ? "http://localhost:5000/api" : "");
 
 // ── Resume APIs ──
 export const getActiveResume = async () => {
+  if (!API_URL) {
+    return {
+      fileUrl: "/Anugrah_K_Resume.pdf",
+      fileName: "Anugrah_K_Resume.pdf",
+      version: "Default Local",
+    };
+  }
+
   try {
     const res = await fetch(`${API_URL}/resume/active`);
     if (!res.ok) throw new Error("Failed to fetch resume");
@@ -18,6 +28,7 @@ export const getActiveResume = async () => {
 };
 
 export const getAllResumes = async (token) => {
+  if (!API_URL) throw new Error("Backend API URL is not configured yet. Please set VITE_API_URL.");
   const res = await fetch(`${API_URL}/resume/all`, {
     headers: { Authorization: `Bearer ${token}` },
   });
@@ -27,6 +38,7 @@ export const getAllResumes = async (token) => {
 };
 
 export const uploadResumeFile = async (formData, token) => {
+  if (!API_URL) throw new Error("Backend API URL is not configured yet. Please set VITE_API_URL.");
   const res = await fetch(`${API_URL}/resume/upload`, {
     method: "POST",
     headers: {
@@ -40,6 +52,7 @@ export const uploadResumeFile = async (formData, token) => {
 };
 
 export const activateResume = async (id, token) => {
+  if (!API_URL) throw new Error("Backend API URL is not configured yet. Please set VITE_API_URL.");
   const res = await fetch(`${API_URL}/resume/${id}/activate`, {
     method: "PATCH",
     headers: { Authorization: `Bearer ${token}` },
@@ -50,6 +63,7 @@ export const activateResume = async (id, token) => {
 };
 
 export const deleteResume = async (id, token) => {
+  if (!API_URL) throw new Error("Backend API URL is not configured yet. Please set VITE_API_URL.");
   const res = await fetch(`${API_URL}/resume/${id}`, {
     method: "DELETE",
     headers: { Authorization: `Bearer ${token}` },
@@ -61,6 +75,10 @@ export const deleteResume = async (id, token) => {
 
 // ── Projects APIs ──
 export const getProjects = async (includeHidden = false, token = null) => {
+  if (!API_URL) {
+    return null;
+  }
+
   try {
     const headers = {};
     if (token) headers.Authorization = `Bearer ${token}`;
@@ -76,6 +94,10 @@ export const getProjects = async (includeHidden = false, token = null) => {
 };
 
 export const getProjectById = async (id) => {
+  if (!API_URL) {
+    return null;
+  }
+
   try {
     const res = await fetch(`${API_URL}/projects/${id}`);
     if (!res.ok) throw new Error("Project not found in API");
@@ -88,6 +110,7 @@ export const getProjectById = async (id) => {
 };
 
 export const createProject = async (projectData, token) => {
+  if (!API_URL) throw new Error("Backend API URL is not configured yet. Please set VITE_API_URL.");
   const res = await fetch(`${API_URL}/projects`, {
     method: "POST",
     headers: {
@@ -102,6 +125,7 @@ export const createProject = async (projectData, token) => {
 };
 
 export const updateProject = async (id, projectData, token) => {
+  if (!API_URL) throw new Error("Backend API URL is not configured yet. Please set VITE_API_URL.");
   const res = await fetch(`${API_URL}/projects/${id}`, {
     method: "PUT",
     headers: {
@@ -116,6 +140,7 @@ export const updateProject = async (id, projectData, token) => {
 };
 
 export const deleteProject = async (id, token) => {
+  if (!API_URL) throw new Error("Backend API URL is not configured yet. Please set VITE_API_URL.");
   const res = await fetch(`${API_URL}/projects/${id}`, {
     method: "DELETE",
     headers: { Authorization: `Bearer ${token}` },
@@ -126,6 +151,7 @@ export const deleteProject = async (id, token) => {
 };
 
 export const uploadProjectImage = async (file, token) => {
+  if (!API_URL) throw new Error("Backend API URL is not configured yet. Please set VITE_API_URL.");
   const formData = new FormData();
   formData.append("image", file);
 
@@ -141,6 +167,7 @@ export const uploadProjectImage = async (file, token) => {
 
 // ── Auth APIs ──
 export const adminLogin = async (password) => {
+  if (!API_URL) throw new Error("Backend API URL is not configured yet. Please set VITE_API_URL.");
   const res = await fetch(`${API_URL}/auth/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -152,6 +179,7 @@ export const adminLogin = async (password) => {
 };
 
 export const verifyAdminToken = async (token) => {
+  if (!API_URL) return false;
   try {
     const res = await fetch(`${API_URL}/auth/verify`, {
       headers: { Authorization: `Bearer ${token}` },
